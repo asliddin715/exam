@@ -1,0 +1,41 @@
+header {
+  background-color: gainsboro;
+}
+
+.navbar {
+  ul {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+
+    li:last-child {
+      margin-left: auto;
+      position: relative;
+    }
+  }
+
+  .cart-count {
+    position: absolute;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    background-color: greenyellow;
+    min-width: 10px;
+    min-height: 10px;
+    padding: 0.2em 0.6em;
+    display: grid;
+    place-items: center;
+    left: 60%;
+    bottom: 60%;
+  }
+
+  a,
+  a:visited {
+    text-decoration: none;
+    color: black;
+  }
+
+  a.activeLink {
+    font-weight: 500;
+    color: cornflowerblue;
+  }
+}
