@@ -8,9 +8,9 @@ const Card = ({ product, cart, setCart }) => {
   return (
   <div className="product-container" style={{border:"none"}}>
       <div className="product-content" style={{width:"300px", display:"flex", flexDirection:"column" }} >
-      <div style={{width:"299px", height:"300px", display:"flex", alignItems:"center",justifyContent:"center", backgroundColor:"#F4F4F4", marginBottom:"20px"}}>
-      <img style={{ width:"185px", height:"164px",objectFit:"contain"}} src={product.image_url} alt={product.product_name} />
-      </div>
+     
+      <img style={{ width:"270px", height:"300px",objectFit:"contain",boxShadow:" -1px 2px 13px -2px rgba(34, 60, 80, 0.2)",marginBottom:"20px"}} src={product.image_url} alt={product.product_name} />
+    
       <h4 style={{fontFamily:"Hammersmith One , sans-serif", fontSize:"20px", fontWeight:"400",}}>
         <Link to={`/products/${product.id}`}>{product.name}</Link>
       </h4>
