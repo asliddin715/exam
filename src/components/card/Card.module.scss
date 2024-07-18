@@ -4,12 +4,15 @@ img {
 
 .colors {
   display: flex;
-  gap: 0.3em;
+  gap: 8px;
+  margin: 15px 0;
 
   .color {
-    width: 2rem;
-    height: 2rem;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     border: 1px solid;
+    
   }
 }
+

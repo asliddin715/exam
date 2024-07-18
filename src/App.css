@@ -1,41 +1,613 @@
-header {
-  background-color: gainsboro;
+li {
+  list-style: none;
 }
 
+
 .navbar {
-  ul {
-    display: flex;
-    gap: 1rem;
-    padding: 1.5rem 2rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 66px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  border-bottom: 2px solid #E9E7E7;
+}
 
-    li:last-child {
-      margin-left: auto;
-      position: relative;
-    }
-  }
+.logo {
+  width: 189px;
+  height: 30px;
+  object-fit: contain;
+}
 
-  .cart-count {
-    position: absolute;
-    border-radius: 50%;
-    font-size: 1.2rem;
-    background-color: greenyellow;
-    min-width: 10px;
-    min-height: 10px;
-    padding: 0.2em 0.6em;
-    display: grid;
-    place-items: center;
-    left: 60%;
-    bottom: 60%;
-  }
+.list {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
 
-  a,
-  a:visited {
-    text-decoration: none;
-    color: black;
-  }
+.lists {
+  gap: 20px;
+}
 
-  a.activeLink {
-    font-weight: 500;
-    color: cornflowerblue;
-  }
+
+.cart-count {
+  position: absolute;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  background-color: #0BA42D;
+  color: white;
+  font-size: 10px;
+  min-width: 5px;
+  min-height: 5px;
+  padding: 1px 5px;
+  display: grid;
+  place-items: center;
+  left: 60%;
+  bottom: 60%;
+}
+
+.cart-fath {
+  position: relative;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a.activeLink {
+  font-weight: 500;
+  color: cornflowerblue;
+}
+
+
+.cont {
+  background-color: #0D2613;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 10px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content-logo {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.content-logo img {
+  width: 48px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+}
+
+.btn img {
+  width: 17px;
+}
+
+.content-option {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.content-option p {
+  font-family: "Inter", sans-serif;
+  color: white;
+  font-weight: 200;
+  font-size: 14px;
+}
+
+.content-option img {
+  width: 2px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.content-btns {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.content-btns button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Inter", sans-serif;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+
+.big {
+  width: 700px;
+  height: 650px;
+}
+
+.big-image {
+  background-color: #F4F4F4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  width: 500px;
+  height: 550px;
+  object-fit: contain;
+}
+
+.image-min {
+  display: flex;
+  align-items: center;
+  margin-top: 160px;
+  gap: 31px;
+}
+
+.choose {
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "Readex Pro", sans-serif;
+}
+
+.item {
+  color: #0BA42D;
+}
+
+.image-mini {
+  width: 114px;
+  height: 114px;
+  object-fit: contain;
+
+}
+
+.star {
+  width: 159px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.containe {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 60px;
+
+}
+
+.single-product {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+
+.father-desc {
+  width: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.name-child {
+  padding: 5px 0 10px 0;
+  border-bottom: dashed #6A6969;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+}
+
+.product-name {
+  font-size: 48px;
+  font-weight: 400;
+  font-family: "Hammersmith One", sans-serif;
+  margin-bottom: 10px;
+}
+
+.product-decrip {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Readex Pro", sans-serif;
+  margin-bottom: 15px;
+}
+
+.child-count {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.child-count p{
+  margin-left: -10px;
+}
+
+.price-child {
+  padding: 30px 0;
+  border-bottom: dashed #6A6969;
+
+
+}
+
+.product-price {
+  font-size: 36px;
+  font-weight: 700;
+  font-family: "Readex Pro", sans-serif;
+  margin-bottom: 20px;
+}
+
+.product-price-desc {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Readex Pro", sans-serif;
+
+}
+
+.product-color {
+  padding: 30px 0;
+  border-bottom: dashed #6A6969;
+
+}
+
+.count-produc {
+  padding: 30px 0;
+
+}
+
+.fath-count {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 20px;
+  padding: 30px 0;
+}
+
+.count {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 40px;
+  border: 3px solid #0BA42D;
+  padding: 13px 25px;
+  width: 180px;
+}
+.count1{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 40px;
+  background-color: #F5F5F5;
+  padding: 10px 15px;
+  width: 180px;
+}
+.btn-shop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.colors {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.shop-btn {
+  padding: 16px 153px 16px 153px;
+  background-color: #0BA42D;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 22px;
+  font-weight: 700px;
+  font-family: "Inter", sans-serif;
+  color: white;
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  width: 523px;
+  border: dashed #6A6969;
+  margin-top: 50px;
+  border-radius: 15px;
+
+}
+
+.deliv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 50px;
+
+}
+
+.ver {
+  border-bottom: dashed #6A6969;
+
+
+}
+
+.deliv h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Readex Pro", sans-serif;
+}
+
+.deliv p {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+}
+
+.shop-container {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0 60px;
+  margin-bottom: 100px;
+}
+.shop-cont{
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+.btn-cart {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  font-family: "Readex Pro",sans-serif;
+  color: #0D2612;
+}
+
+.cart {
+  margin: 60px 0;
+}
+
+.content-shop {
+  width: 833px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.product-shop-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: dashed #6A6969;
+  border-bottom: dashed #6A6969;
+  padding: 12px 30px;
+}
+
+.nan {
+  display: flex;
+  align-items: center;
+  gap: 180px;
+}
+
+.cart-content {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 40px 30px;
+  border-bottom: dashed #6A6969;
+
+}
+
+.cart-image {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+}
+
+.cart-img{
+  width: 155px;
+}
+
+.cart-text{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.log{
+  font-weight: 400;
+  font-size: 20px;
+  font-family: "Hammersmith One", sans-serif;
+}
+.cart-produc{
+  margin-bottom: 40px;
+  font-weight: 300;
+  font-size: 18px;
+  font-family: "Readex Pro", sans-serif;
+}
+
+.stock{
+  color: #0BA42D;
+}
+
+.total{
+  width: 396px;
+}
+
+.cart-total{
+  padding-bottom: 10px;
+  border-bottom: dashed #6A6969;
+}
+.cart-total h2{
+  font-family: "Hammersmith One",sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+}
+
+.cart-total-name{
+  padding: 30px 0;
+  border-bottom: dashed #6A6969;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.cart-child{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.total-child{
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.total-btn{
+  padding: 16px 106px 16px 105px;
+  background-color: #0BA42D;
+  border-radius: 10px;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+
+.car{
+  margin: 0 auto;
+
+}
+.asside{
+  width: 285px;
+}
+.list-chek{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.check{
+  display: flex;
+  align-items: center;
+  gap: px;
+}
+
+.contai {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* margin-left: -10px; */
+}
+
+/* Hide the browser's default checkbox */
+.contai input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 5px;
+  border: 2px solid #0BA42D;
+}
+
+/* On mouse-over, add a grey background color */
+
+
+/* When the checkbox is checked, add a blue background */
+.contai input:checked ~ .checkmark {
+  background-color: white;
+}
+
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+
+.contai input:checked ~ .checkmark:after {
+  display: block;
+}
+
+
+.contai .checkmark:after {
+  left: 5px;
+  top: px;
+  width: 5px;
+  height: 10px;
+  border: solid  #0BA42D;;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.brand{
+  border-top: dashed #454444CC;
+  border-bottom: dashed #454444CC;
+  padding: 20px 0;
+  
+
+}
+.asside-color{
+  border-bottom: dashed #454444CC;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+.reset{
+  padding: 10px 40px;
+  background-color: #d2d2d2;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.price-label{
+  margin-bottom: 20px;
+}
+.price-input{
+display: block;
+margin: 10px 0;
+outline: none;
+padding: 5px 10px;
+border-radius: 5px;
+font-family: "Readex Pro", sans-serif;
+font-size: 18px;
+font-weight: 400px;
 }

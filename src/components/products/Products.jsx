@@ -8,7 +8,6 @@ import { addProducts } from "../../store/productsSlice";
 const baseURL = import.meta.env.VITE_BASE_URL;
 
 const Products = ({ cart, setCart }) => {
-  // const [products, setProducts] = useState([]);
   const products = useSelector((store) => store.productsReducer.products);
   const dispatch = useDispatch();
 
@@ -19,6 +18,9 @@ const Products = ({ cart, setCart }) => {
 
   const [colors, setColors] = useState([]);
   const [selectedColor, setSelectedColor] = useState("");
+
+  const [minPrice, setMinPrice] = useState("");
+  const [maxPrice, setMaxPrice] = useState("");
 
   useEffect(() => {
     async function fetchBrands() {
@@ -50,6 +52,12 @@ const Products = ({ cart, setCart }) => {
       if (selectedBrand) {
         params.push(`brand_name=${encodeURIComponent(selectedBrand)}`);
       }
+      if (minPrice) {
+        params.push(`price_gte=${minPrice}`);
+      }
+      if (maxPrice) {
+        params.push(`price_lte=${maxPrice}`);
+      }
 
       if (params.length > 0) {
         query += `?${params.join("&")}`;
@@ -67,55 +75,97 @@ const Products = ({ cart, setCart }) => {
     }
 
     fetchProducts();
-  }, [selectedBrand, selectedColor]);
-
+  }, [selectedBrand, selectedColor, minPrice, maxPrice]);
   return (
-    <div className={styles.container}>
-      <aside>
-        <div>
+    <div style={{ maxWidth: "1440px", margin: "0 auto", padding: "0 60px", display: "flex", alignItems: "start", justifyContent: "space-between" }}>
+
+      <aside className="asside">
+        <div className="brand">
           <h3>BRAND</h3>
-          <ul>
+          <ul className="list-chek">
             {brands.map((brand, index) => (
-              <li key={index}>
-                <input
-                  type='radio'
-                  value={brand}
-                  name='brand'
-                  id={brand}
-                  checked={brand === selectedBrand}
-                  onChange={(e) => setSelectedBrand(e.target.value)}
-                />
-                <label htmlFor={brand}>{brand}</label>
+              <li className="check" key={index}>
+
+                <label class="contai">
+                  <input
+                    className="chec"
+                    type='checkbox'
+                    value={brand}
+                    name='brand'
+                    id={brand}
+                    checked={brand === selectedBrand}
+                    onChange={(e) => setSelectedBrand(e.target.value)}
+                  />
+                  <span class="checkmark"></span>
+                </label>
+                <label className="lab" htmlFor={brand}>{brand}</label>
               </li>
             ))}
           </ul>
-          <button onClick={() => setSelectedBrand("")}>Reset</button>
+          <button className="reset" onClick={() => setSelectedBrand("")}>Reset</button>
         </div>
 
-        <div>
+        <div className="asside-color">
           <h3>COLORS</h3>
-          <ul className={styles.colorsContainer}>
+          <ul style={{
+            display: "flex",
+            alignItems: "center", flexWrap: "wrap", gap: "10px", margin: "20px 0"
+          }}>
             {colors.map((color, index) => (
               <li key={index}>
                 <div
+                  key={index}
+                  className="color-option"
                   style={{
-                    background: color,
-                    outline: selectedColor === color ? "3px solid red" : "",
+                    backgroundColor: color,
+                    width: '24px',
+                    height: '24px',
+                    border: "1px solid black",
+                    borderRadius: '50%',
+                    cursor: 'pointer',
+                    outline: selectedColor === color ? "3px solid Dodgerblue" : "",
+
                   }}
-                  className={styles.color}
-                  onClick={() => setSelectedColor(color)}
-                />
+                  onClick={() => setSelectedColor(color)}>
+                </div>
               </li>
             ))}
           </ul>
-          <button onClick={() => setSelectedColor("")}>Reset</button>
+          <button className="reset" onClick={() => setSelectedColor("")}>Reset</button>
+        </div>
+
+        <div className="price-range">
+          <h3 className="price-label">PRICE RANGE</h3>
+          <div>
+            <label  htmlFor="minPrice">Min Price:</label>
+            <input
+            className="price-input"
+              type="number"
+              id="minPrice"
+              value={minPrice}
+              onChange={(e) => setMinPrice(e.target.value)}
+            />
+          </div>
+          <div>
+            <label htmlFor="maxPrice">Max Price:</label>
+            <input
+            className="price-input"
+            
+              type="number"
+              id="maxPrice"
+              value={maxPrice}
+              onChange={(e) => setMaxPrice(e.target.value)}
+            />
+          </div>
+          <button className="reset" onClick={() => { setMinPrice(""); setMaxPrice(""); }}>Reset</button>
         </div>
       </aside>
+
       <main>
         {loading ? (
           <p>Loading...</p>
         ) : products.length ? (
-          <div className={styles.grid}>
+          <div style={{ width: "1000px", display: "flex", flexWrap: "wrap", justifyContent: "start", gap: "50px", alignItems: "center" }}>
             {products.map((product) => (
               <Card
                 key={product.id}
